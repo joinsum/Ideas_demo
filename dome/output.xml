@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1 (Python 3.6.5 on win32)" generated="20190606 08:32:08.015" rpa="false">
-<suite id="s1" name="Dome" source="D:\workspace\dome">
-<suite id="s1-s1" name="Case" source="D:\workspace\dome\case">
-<suite id="s1-s1-s1" name="Login" source="D:\workspace\dome\case\login.robot">
+<robot generator="Robot 3.1.1 (Python 3.6.5 on win32)" generated="20190614 14:43:56.407" rpa="false">
+<suite id="s1" name="Dome" source="C:\Users\g1702405\git\repository\dome">
+<suite id="s1-s1" name="Case" source="C:\Users\g1702405\git\repository\dome\case">
+<suite id="s1-s1-s1" name="ProjectManagement" source="C:\Users\g1702405\git\repository\dome\case\ProjectManagement.robot">
 <test id="s1-s1-s1-t1" name="登录">
 <kw name="TestSetup" library="login_element">
 <doc>启动用例时预设</doc>
@@ -11,15 +11,23 @@
 <arguments>
 <arg>${wait}</arg>
 </arguments>
-<status status="PASS" starttime="20190606 08:35:24.103" endtime="20190606 08:35:24.104"></status>
+<status status="PASS" starttime="20190614 14:43:56.856" endtime="20190614 14:43:56.912"></status>
 </kw>
 <kw name="Set Selenium Timeout" library="Selenium2Library">
 <doc>Sets the timeout that is used by various keywords.</doc>
 <arguments>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20190606 08:35:24.105" endtime="20190606 08:35:24.105"></status>
+<status status="PASS" starttime="20190614 14:43:56.915" endtime="20190614 14:43:56.925"></status>
 </kw>
+<status status="PASS" starttime="20190614 14:43:56.835" endtime="20190614 14:43:56.928"></status>
+</kw>
+<kw name="Login" library="login_element">
+<doc>登录系统</doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${passwd}</arg>
+</arguments>
 <kw name="OpenBrowser_Maximization" library="login_element">
 <doc>打开浏览器</doc>
 <kw name="Open Browser" library="Selenium2Library">
@@ -28,31 +36,23 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20190606 08:35:24.114" level="INFO">Opening browser 'chrome' to base url 'http://i2m.jusdascm.com/ideas_test/#/'.</msg>
-<status status="PASS" starttime="20190606 08:35:24.106" endtime="20190606 08:35:27.331"></status>
+<msg timestamp="20190614 14:43:56.963" level="INFO">Opening browser 'chrome' to base url 'http://i2m.jusdascm.com/ideas_test/#/'.</msg>
+<status status="PASS" starttime="20190614 14:43:56.950" endtime="20190614 14:44:06.925"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20190606 08:35:27.331" endtime="20190606 08:35:28.601"></status>
+<status status="PASS" starttime="20190614 14:44:06.927" endtime="20190614 14:44:11.085"></status>
 </kw>
-<status status="PASS" starttime="20190606 08:35:24.106" endtime="20190606 08:35:28.603"></status>
+<status status="PASS" starttime="20190614 14:43:56.939" endtime="20190614 14:44:11.087"></status>
 </kw>
-<status status="PASS" starttime="20190606 08:35:24.102" endtime="20190606 08:35:28.603"></status>
-</kw>
-<kw name="Login" library="login_element">
-<doc>登录系统</doc>
-<arguments>
-<arg>G1702405</arg>
-<arg>Jusda#123</arg>
-</arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
 <arg>${input_name}</arg>
 <arg>${name}</arg>
 </arguments>
-<msg timestamp="20190606 08:35:28.607" level="INFO">Typing text 'G1702405' into text field 'xpath=//*[@placeholder='请输入用户名']'.</msg>
-<status status="PASS" starttime="20190606 08:35:28.605" endtime="20190606 08:35:28.909"></status>
+<msg timestamp="20190614 14:44:11.097" level="INFO">Typing text 'G1702405' into text field 'xpath=//*[@placeholder='请输入用户名']'.</msg>
+<status status="PASS" starttime="20190614 14:44:11.088" endtime="20190614 14:44:11.382"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into text field identified by ``locator``.</doc>
@@ -60,63 +60,234 @@
 <arg>${input_password}</arg>
 <arg>${passwd}</arg>
 </arguments>
-<msg timestamp="20190606 08:35:28.910" level="INFO">Typing password into text field 'xpath=//*[@placeholder='请输入密码']'.</msg>
-<status status="PASS" starttime="20190606 08:35:28.909" endtime="20190606 08:35:29.219"></status>
+<msg timestamp="20190614 14:44:11.395" level="INFO">Typing password into text field 'xpath=//*[@placeholder='请输入密码']'.</msg>
+<status status="PASS" starttime="20190614 14:44:11.384" endtime="20190614 14:44:11.661"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3</arg>
 </arguments>
-<msg timestamp="20190606 08:35:32.222" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20190606 08:35:29.220" endtime="20190606 08:35:32.223"></status>
+<msg timestamp="20190614 14:44:14.676" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190614 14:44:11.663" endtime="20190614 14:44:14.676"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${click_login}</arg>
 </arguments>
-<msg timestamp="20190606 08:35:32.225" level="INFO">Clicking element 'xpath=//span[text()='登录']'.</msg>
-<status status="PASS" starttime="20190606 08:35:32.223" endtime="20190606 08:35:32.340"></status>
+<msg timestamp="20190614 14:44:14.692" level="INFO">Clicking element 'xpath=//span[text()='登录']'.</msg>
+<status status="PASS" starttime="20190614 14:44:14.679" endtime="20190614 14:44:14.806"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:43:56.929" endtime="20190614 14:44:14.806"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<msg timestamp="20190606 08:35:37.344" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20190606 08:35:32.341" endtime="20190606 08:35:37.344"></status>
+<msg timestamp="20190614 14:44:19.822" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190614 14:44:14.811" endtime="20190614 14:44:19.823"></status>
 </kw>
-<status status="PASS" starttime="20190606 08:35:28.604" endtime="20190606 08:35:37.344"></status>
+<kw name="login success assert" library="login_element">
+<doc>登录成功校验</doc>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${登录账号}</arg>
+</arguments>
+<assign>
+<var>${content}</var>
+</assign>
+<msg timestamp="20190614 14:44:20.485" level="INFO">${content} = G1702405</msg>
+<status status="PASS" starttime="20190614 14:44:19.834" endtime="20190614 14:44:20.486"></status>
 </kw>
-<kw name="TestTeardown" library="login_element">
-<doc>案例结束时关闭浏览器</doc>
-<kw name="Close All Browsers" library="Selenium2Library">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20190606 08:35:37.347" endtime="20190606 08:35:39.569"></status>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${content}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:20.502" level="INFO">G1702405</msg>
+<status status="PASS" starttime="20190614 14:44:20.488" endtime="20190614 14:44:20.503"></status>
 </kw>
-<status status="PASS" starttime="20190606 08:35:37.345" endtime="20190606 08:35:39.570"></status>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${content}</arg>
+<arg>${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190614 14:44:20.505" endtime="20190614 14:44:20.517"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:19.824" endtime="20190614 14:44:20.520"></status>
 </kw>
 <doc>登录ideas系统</doc>
-<status status="PASS" starttime="20190606 08:35:24.100" endtime="20190606 08:35:39.571" critical="yes"></status>
+<status status="PASS" starttime="20190614 14:43:56.833" endtime="20190614 14:44:20.523" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20190606 08:35:23.730" endtime="20190606 08:35:39.572"></status>
+<test id="s1-s1-s1-t2" name="新建项目">
+<kw name="TestSetup" library="login_element">
+<doc>启动用例时预设</doc>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${wait}</arg>
+</arguments>
+<status status="PASS" starttime="20190614 14:44:20.531" endtime="20190614 14:44:20.537"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20190614 14:44:20.540" endtime="20190614 14:44:20.546"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:20.526" endtime="20190614 14:44:20.548"></status>
+</kw>
+<kw name="New_Project" library="BusinessOrganizationManagement">
+<doc>新建项目操作</doc>
+<arguments>
+<arg>${project.code}</arg>
+<arg>${project.name}</arg>
+</arguments>
+<kw name="Click_BasicManagement" library="BusinessOrganizationManagement">
+<doc>点击基础管理</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${基础管理}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:20.588" level="INFO">Clicking element 'xpath=//span[text()='基础管理']'.</msg>
+<status status="PASS" starttime="20190614 14:44:20.578" endtime="20190614 14:44:21.457"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:20.560" endtime="20190614 14:44:21.459"></status>
+</kw>
+<kw name="Click_BusinessOrganizationManagement" library="BusinessOrganizationManagement">
+<doc>点击商业组织管理</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${商业组织管理}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:21.478" level="INFO">Clicking element 'xpath=//span[text()='商业组织管理']'.</msg>
+<status status="PASS" starttime="20190614 14:44:21.473" endtime="20190614 14:44:21.637"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:21.461" endtime="20190614 14:44:21.639"></status>
+</kw>
+<kw name="Click_ProjectManagement" library="BusinessOrganizationManagement">
+<doc>点击项目管理</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${项目管理}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:21.653" level="INFO">Clicking element 'xpath=//span[text()='项目管理']'.</msg>
+<status status="PASS" starttime="20190614 14:44:21.650" endtime="20190614 14:44:22.017"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:21.641" endtime="20190614 14:44:22.019"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190614 14:44:24.030" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190614 14:44:22.021" endtime="20190614 14:44:24.031"></status>
+</kw>
+<kw name="Click_NEW" library="BusinessOrganizationManagement">
+<doc>点击新建</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${项目新建}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:24.047" level="INFO">Clicking element 'xpath=//*[@class='clearfix menubar-left']//*[@id='new']'.</msg>
+<status status="PASS" starttime="20190614 14:44:24.043" endtime="20190614 14:44:24.172"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:24.032" endtime="20190614 14:44:24.174"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190614 14:44:26.179" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190614 14:44:24.176" endtime="20190614 14:44:26.179"></status>
+</kw>
+<kw name="Input_ProjectCode" library="BusinessOrganizationManagement">
+<doc>输入项目编码</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${项目维护_项目编码}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:26.193" level="INFO">Clicking element 'xpath=//input[@id='project.code']'.</msg>
+<status status="PASS" starttime="20190614 14:44:26.190" endtime="20190614 14:44:26.283"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${项目维护_项目编码}</arg>
+<arg>${project.code}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:26.293" level="INFO">Typing text '自动化测试初试' into text field 'xpath=//input[@id='project.code']'.</msg>
+<status status="PASS" starttime="20190614 14:44:26.285" endtime="20190614 14:44:26.426"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:26.181" endtime="20190614 14:44:26.428"></status>
+</kw>
+<kw name="Input_ProjectName" library="BusinessOrganizationManagement">
+<doc>输入项目名称</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${项目维护_项目}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:26.440" level="INFO">Clicking element 'xpath=//input[@id='project.name']'.</msg>
+<status status="PASS" starttime="20190614 14:44:26.438" endtime="20190614 14:44:26.520"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${项目维护_项目}</arg>
+<arg>${project.name}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:57.846" level="INFO">Typing text '自动化测试初试' into text field 'xpath=//input[@id='project.name']'.</msg>
+<status status="PASS" starttime="20190614 14:44:26.522" endtime="20190614 14:44:58.011"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:26.430" endtime="20190614 14:44:58.014"></status>
+</kw>
+<kw name="Click_ProjectNew" library="BusinessOrganizationManagement">
+<doc>项目维护中点击新建</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${项目维护_新建}</arg>
+</arguments>
+<msg timestamp="20190614 14:44:58.030" level="INFO">Clicking element 'xpath=//*[@class='thorn6-dialog-buttons']//*[@id='new']'.</msg>
+<status status="PASS" starttime="20190614 14:44:58.026" endtime="20190614 14:45:03.129"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:58.016" endtime="20190614 14:45:03.131"></status>
+</kw>
+<status status="PASS" starttime="20190614 14:44:20.549" endtime="20190614 14:45:03.132"></status>
+</kw>
+<doc>新建项目</doc>
+<status status="PASS" starttime="20190614 14:44:20.524" endtime="20190614 14:45:03.134" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190614 14:43:56.483" endtime="20190614 14:45:03.135"></status>
 </suite>
-<status status="PASS" starttime="20190606 08:35:23.726" endtime="20190606 08:35:39.575"></status>
+<status status="PASS" starttime="20190614 14:43:56.479" endtime="20190614 14:45:03.140"></status>
 </suite>
-<status status="PASS" starttime="20190606 08:35:23.696" endtime="20190606 08:35:39.576"></status>
+<status status="PASS" starttime="20190614 14:43:56.452" endtime="20190614 14:45:03.142"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Dome">Dome</stat>
-<stat pass="1" fail="0" id="s1-s1" name="Case">Dome.Case</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="Login">Dome.Case.Login</stat>
+<stat pass="2" fail="0" id="s1" name="Dome">Dome</stat>
+<stat pass="2" fail="0" id="s1-s1" name="Case">Dome.Case</stat>
+<stat pass="2" fail="0" id="s1-s1-s1" name="ProjectManagement">Dome.Case.ProjectManagement</stat>
 </suite>
 </statistics>
 <errors>

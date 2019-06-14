@@ -5,5 +5,8 @@ Resource    ../method/login_element.robot
 登录
     [Documentation]    登录ideas系统
     TestSetup
-    Login    G1702405    Jusda#123
+    Login    ${name}    ${passwd}
+    
+    Sleep    5   
+    login success assert
     TestTeardown
